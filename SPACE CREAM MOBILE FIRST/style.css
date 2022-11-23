@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --color-body: hsla(233, 100%, 97%, 1); 
+    --color-header: hsla(218, 17%, 62%, 1);
+    --color-span: hsla(232, 17%, 35%, 1);
+    --color-spbck:hsla(312, 91%, 96%, 1);
+    --ff-heading:'Staatliches', 'cursive';
+    --ff-body: 'Palanquin', 'sans-serif';
+}
+
+body{
+background: var(--color-body);
+font-family: var(--ff-body);
+
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 1.5rem;
+
+}
+
+header{
+    background: var(--color-header);
+   
+    padding-bottom: 2.9rem;
+
+    display: grid;
+    place-items: center;
+    
+    
+}
+
+#sorvete{
+    padding: 3.2rem 0;
+
+}
+header h1{
+    text-transform: uppercase;
+    font-family:var(--ff-heading);
+    color:#ffff;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.title{
+   background: hsla(275, 18%, 79%, 1); 
+   height: 4.9rem;
+   padding: 0.8rem;
+   width: 100%;
+   text-align: center;
+
+}
+
+span{
+    font-family:var(--ff-heading);
+    color: var(--color-span);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.0rem;
+    
+}
+
+p{
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 6.0rem;
+}
+
+.cards{
+display: grid;
+gap: 3.2rem;
+
+animation: updown;
+animation-duration: 600ms;
+animation-fill-mode: forwards;
+
+}
+
+.cards .card{
+    position: relative;
+    
+}
+
+.cards .card span{
+position: absolute;
+top: 1.6rem;
+right:0;
+margin-right: 1.6rem;
+background: hsla(312, 91%, 96%, 1);
+width: 11.2rem;
+height: 3.5rem ;
+padding: 1px 2.4rem;
+border-radius: 2.0rem;
+display: grid;
+place-items: center;
+
+animation: downup;
+animation-duration: 1s;
+}
+
+@keyframes updown{
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(-15px);
+    }
+
+
+}
+
+@keyframes downup {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+}
